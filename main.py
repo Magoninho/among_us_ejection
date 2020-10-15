@@ -1,6 +1,16 @@
-import sys, random, pygame
+import sys, random, pygame, os
 from SimpleDrawEngine import *
 from astronauts import *
+
+## Limpador de tela multiplataforma Magoninho Gamer versão 1.2
+def limpa_tela():
+    os.system('cls' if os.name=='nt' else 'clear')
+
+limpa_tela()
+
+print("\u001b[0mSelecione o personagem escrevendo algum deles dessa lista:\n\u001b[31m-red\n\u001b[33m-yellow\n\u001b[32m-green\n\u001b[36m-cyan\u001b[0m")
+file = input("Personagem: ")
+
 pygame.init()
 
 N = 200
@@ -36,7 +46,7 @@ test = 45
 angle = 0
 while True:	
 	clock.tick(30)
-	player = Player(screen, "red.png", (0, 0), angle)
+	player = Player(screen, ("characters/" + file + ".png"), (0, 0), angle)
 	angle += 5
 	
 	
