@@ -3,7 +3,7 @@
 ### To-do list
  - [x] animation
  - [x] ambience sound
-
+ - [ ] translate the code to english (hard)
  ### Impossible for me (please help!)
  - [ ] ~~text~~
  - [ ] ~~text animation~~
