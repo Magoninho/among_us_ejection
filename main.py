@@ -70,7 +70,7 @@ def main(color):
 		
 		pos_x += vx
 		vx -= 0.035
-		print(vx)
+
 		if vx <= 0:
 			vx = 0
 		
