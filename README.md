@@ -3,6 +3,8 @@
 ### To-do list
  - [x] animation
  - [x] ambience sound
- - [ ] text
- - [ ] text animation
- - [ ] text sound effects
+
+ ### Impossible for me (please help!)
+ - [ ] ~~text~~
+ - [ ] ~~text animation~~
+ - [ ] ~~text sound effects~~
