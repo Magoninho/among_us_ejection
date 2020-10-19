@@ -7,7 +7,7 @@ class Player:
     def __init__(self, screen, imagem, rect, angle, pos_x):
         
         self.screen = screen
-        self.imagem = pygame.image.load(imagem).convert()
+        self.imagem = pygame.image.load(imagem).convert_alpha()
         self.rect = rect
         self.angle = angle
         self.pos_x = pos_x
@@ -15,7 +15,7 @@ class Player:
     def animation(self):
         ## scaling the image
         self.imagem = pygame.transform.scale(self.imagem, (150, 150))
-        ## 
+
         self.rect = self.imagem.get_rect()
         self.rect.center = (self.pos_x, 300)
         old_center = self.rect.center
