@@ -22,14 +22,15 @@ def main(color):
 	screen = pygame.display.set_mode((largura, altura))
 	caption = pygame.display.set_caption("ALPHA")
 
-	# nao funcionou
-	# for star in range(N):	
-	# 	x, y = random.randint(0, largura), random.randint(0, altura)
-	# 	Rect(screen, (255, 255, 255), (x, y, 1, 1))
-
-
+	# posisão das estrelas
+	## estrelas menores
 	stars = [
 		[random.randint(0, largura), random.randint(0, altura)] for x in range(N)
+	]
+	## estrelas grandes
+
+	big_stars = [
+		[random.randint(0, largura), random.randint(0, altura)] for x in range(50)
 	]
 
 
@@ -64,7 +65,12 @@ def main(color):
 			Rect(screen, white, (star[0], star[1], 2, 2))
 			star[0] -= 0.5
 			if star[0] < 0:
-				star[0] = 800
+				star[0] = largura
+		for big_star in big_stars:
+			Circle(screen, white, (big_star[0], big_star[1]), 3)
+			big_star[0] -= 1
+			if big_star[0] < 0:
+				big_star[0] = largura
 		## Astronauts
 		player.animation()
 		

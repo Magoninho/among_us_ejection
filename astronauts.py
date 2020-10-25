@@ -1,4 +1,3 @@
-# -- coding: UTF-8 --
 import pygame, sys
 from SimpleDrawEngine import *
 
@@ -24,3 +23,4 @@ class Player:
         self.rect.center = old_center
         
         self.screen.blit(self.imagem, self.rect)
+
