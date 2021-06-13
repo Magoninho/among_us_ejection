@@ -4,13 +4,13 @@ from astronauts import *
 
 
 ## Limpador de tela multiplataforma Magoninho Gamer versão 1.2
-def limpa_tela():
-    os.system('cls' if os.name=='nt' else 'clear')
+# def limpa_tela():
+#     os.system('cls' if os.name=='nt' else 'clear')
 
-limpa_tela()
+# limpa_tela()
 
 
-def main(color):
+def main(color, name):
 	pygame.init()
 	N = 200
 	white = (255, 255, 255)
@@ -54,7 +54,10 @@ def main(color):
 	impostor = random.choice([True, False])
 
 	final_string = ""
-	text = list(f"{file} was The Impostor") if impostor else list(f"{file} was not The Impostor")
+	if name != "":
+		text = list(f"{name} was The Impostor") if impostor else list(f"{name} was not The Impostor")
+	else:
+		text = list(f"{file} was The Impostor") if impostor else list(f"{file} was not The Impostor")
 		
 	text_complete = False
 
