@@ -35,7 +35,7 @@ def main(color):
 
 
 	pygame.mixer.init()
-	pygame.mixer.music.load('sound.mp3')
+	pygame.mixer.music.load('sound.ogg')
 	pygame.mixer.music.play(-1)
 
 	clock = pygame.time.Clock()
@@ -45,11 +45,10 @@ def main(color):
 	pos_x = -360
 	vx = 10
 	angle = 0
+	player = Player(screen, ("characters/" + file + ".png"), (0, 0), angle, pos_x)
 	while True:	
 		clock.tick(30)
-		player = Player(screen, ("characters/" + file + ".png"), (0, 0), angle, pos_x)
 		angle += 5
-		
 		
 		
 		for event in pygame.event.get():
@@ -72,7 +71,8 @@ def main(color):
 			if big_star[0] < 0:
 				big_star[0] = largura
 		## Astronauts
-		player.animation()
+		player.move(vx)
+		player.animation(angle)
 		
 		pos_x += vx
 		vx -= 0.035
