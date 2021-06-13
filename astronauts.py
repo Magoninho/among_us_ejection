@@ -17,7 +17,6 @@ class Player(pygame.sprite.Sprite):
     def move(self, speed):
         # self.pos_x += 1
         self.rect.x += speed
-        print(self.rect.x)
         
 
     def animation(self, angle):

@@ -1,5 +1,5 @@
 import pygame
-
+from pygame.locals import *
 
 class Circle:
     def __init__(self, screen, color, center, radius):
@@ -27,8 +27,15 @@ class Line:
         pygame.draw.line(self.screen, self.color, self.start, self.end, self.thiccness)
 
 class Text:
-    def write_text(font, size, text, antialias, color, vector2, screen):
-        pygame.font.init()
-        font = pygame.font.SysFont(font, size)
-        text = font.render(text, antialias, color)
-        screen.blit(text, vector2)
+    def __init__(self, font, size, antialias, color, vector2, screen):
+        self.font = font
+        self.size = size
+        self.antialias = antialias
+        self.color = color
+        self.vector2 = vector2
+        self.screen = screen
+        
+    def draw(self, text, position):
+        self.font = pygame.font.Font(pygame.font.get_default_font(), self.size)
+        self.text = self.font.render(text, self.antialias, self.color)
+        self.screen.blit(self.text, (position[0] - self.text.get_rect().width / 2, position[1]))
