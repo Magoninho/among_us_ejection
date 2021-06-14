@@ -49,7 +49,7 @@ def main(color, name):
 	angle = 0
 	player = Player(screen, ("characters/" + file + ".png"), (0, 0), angle, pos_x)
 
-	texto = Text(None, 24, False, (255, 255, 255), (0, 0), screen)
+	texto = Text(24, False, (255, 255, 255), (0, 0), screen)
 
 	impostor = random.choice([True, False])
 	
@@ -69,6 +69,9 @@ def main(color, name):
 		for event in pygame.event.get():
 			if event.type == pygame.QUIT:
 				pygame.quit()
+			if event.type == pygame.KEYDOWN:
+				if event.key == pygame.K_ESCAPE:
+					pygame.quit()
 				
 		angle += 5
 
@@ -108,8 +111,6 @@ def main(color, name):
 		## Astronauts
 		player.move(vx)
 		player.animation(angle)
-		rect = pygame.Rect(0, 0, 12, 12)
-		rect.move(12, 123)
 		
 
 		pos_x += vx

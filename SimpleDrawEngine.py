@@ -27,8 +27,7 @@ class Line:
 		pygame.draw.line(self.screen, self.color, self.start, self.end, self.thiccness)
 
 class Text:
-	def __init__(self, font, size, antialias, color, vector2, screen):
-		self.font = font
+	def __init__(self, size, antialias, color, vector2, screen):
 		self.size = size
 		self.antialias = antialias
 		self.color = color

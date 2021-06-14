@@ -18,10 +18,15 @@ text_field = Text(root, height=1, width=12, insertbackground='white', bg='black'
 text_field.pack()
 Label(root, text="\n", background='black').pack()
 text1 = Label(root, text="Select the character:", fg="white", background='black').pack()
-button1 = Button(root, text="  red   ", fg="red", background='black', borderwidth=0, command=lambda: color('red', text_field.get("1.0", 'end-1c'))).pack()
-button2 = Button(root, text="yellow", fg="yellow", background='black', borderwidth=0, command=lambda: color('yellow', text_field.get("1.0", 'end-1c'))).pack()
-button3 = Button(root, text=" green ", fg="lightgreen", background='black', borderwidth=0, command=lambda: color('green', text_field.get("1.0", 'end-1c'))).pack()
-button4 = Button(root, text="  cyan  ", fg="cyan", background='black', borderwidth=0, command=lambda: color('cyan', text_field.get("1.0", 'end-1c'))).pack()
+button1 = Button(root, text="  red   ", fg="red", background='black', borderwidth=0, command=lambda: color('red', text_field.get("1.0", 'end-1c')))
+button2 = Button(root, text="yellow", fg="yellow", background='black', borderwidth=0, command=lambda: color('yellow', text_field.get("1.0", 'end-1c')))
+button3 = Button(root, text=" green ", fg="lightgreen", background='black', borderwidth=0, command=lambda: color('green', text_field.get("1.0", 'end-1c')))
+button4 = Button(root, text="  cyan  ", fg="cyan", background='black', borderwidth=0, command=lambda: color('cyan', text_field.get("1.0", 'end-1c')))
+
+button1.pack()
+button2.pack()
+button3.pack()
+button4.pack()
 
 """
 muito gamer
