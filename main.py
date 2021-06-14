@@ -4,6 +4,7 @@ import game
 root = Tk()
 
 root.geometry("800x600")
+root.title('Impostor detector')
 root.configure(background='black')
 img = PhotoImage(file="among-us-logo.png")
 lbl_img = Label(root, image=img, borderwidth=0).pack()

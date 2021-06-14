@@ -4,10 +4,10 @@ from astronauts import *
 
 
 ## Limpador de tela multiplataforma Magoninho Gamer versão 1.2
-# def limpa_tela():
-#     os.system('cls' if os.name=='nt' else 'clear')
+def limpa_tela():
+    os.system('cls' if os.name=='nt' else 'clear')
 
-# limpa_tela()
+limpa_tela()
 
 
 def main(color, name):
@@ -52,7 +52,7 @@ def main(color, name):
 	texto = Text(None, 24, False, (255, 255, 255), (0, 0), screen)
 
 	impostor = random.choice([True, False])
-
+	
 	final_string = ""
 	if name != "":
 		text = list(f"{name} was The Impostor") if impostor else list(f"{name} was not The Impostor")
@@ -108,7 +108,8 @@ def main(color, name):
 		## Astronauts
 		player.move(vx)
 		player.animation(angle)
-		
+		rect = pygame.Rect(0, 0, 12, 12)
+		rect.move(12, 123)
 		
 
 		pos_x += vx

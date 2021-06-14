@@ -38,4 +38,6 @@ class Text:
 	def draw(self, text, position):
 		self.font = pygame.font.Font(pygame.font.get_default_font(), self.size)
 		self.text = self.font.render(text, self.antialias, self.color)
+
+		# makes the text be centered
 		self.screen.blit(self.text, (position[0] - self.text.get_rect().width / 2, position[1]))
